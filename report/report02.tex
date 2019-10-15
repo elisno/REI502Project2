@@ -1,0 +1,190 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[icelandic,english]{babel}
+\usepackage{cancel}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{feyn}
+\usepackage{units}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{verbatim}
+
+\usepackage{lscape}
+\usepackage{rotating}
+
+
+% ***********************************************************
+% ******************* PHYSICS HEADER ************************
+% ***********************************************************
+% Version 2
+\usepackage{amsmath} % AMS Math Package
+\usepackage{amsthm} % Theorem Formatting
+\usepackage{amssymb}	% Math symbols such as \mathbb
+
+\usepackage{graphicx} % Allows for eps images
+
+
+
+%\makeatletter
+
+\usepackage{multicol} % Allows for multiple columns
+\usepackage[dvips,letterpaper,margin=0.75in,bottom=0.5in]{geometry}
+ % Sets margins and page size
+%\pagestyle{empty} % Removes page numbers
+\makeatletter % Need for anything that contains an @ command 
+\renewcommand{\maketitle} % Redefine maketitle to conserve space
+{ \begingroup \vskip 10pt \begin{center} \large {\bf \@title}
+	\vskip 10pt \large \@author \hskip 20pt \@date \end{center}
+  \vskip 10pt \endgroup \setcounter{footnote}{0} }
+\makeatother % End of region containing @ commands
+\renewcommand{\labelenumi}{(\alph{enumi})} % Use letters for enumerate
+% \DeclareMathOperator{\Sample}{Sample}
+% Declare statistical operators
+\DeclareMathOperator{\Expect}{E}
+\DeclareMathOperator{\Variance}{Var}
+\DeclareMathOperator{\Covariance}{Cov}
+\DeclareMathOperator{\Correlation}{Corr}
+
+\newcommand{\E}[1]{\Expect \left[ #1 \right]}
+\newcommand{\var}[1]{\Variance \left[ #1 \right]}
+\newcommand{\cov}[1]{\Covariance \left[ #1 \right]}
+\newcommand{\corr}[1]{\Corelation \left[ #1 \right]}
+\newcommand{\s}[1]{\sigma_{#1}}
+
+
+
+\DeclareMathOperator{\GINI}{\text{Gini}}
+\newcommand{\gini}[1]{\GINI \left( \text{#1} \right)}
+\DeclareMathOperator{\Entropy}{\text{Entropy}}
+\newcommand{\entropy}[1]{\Entropy \left( \text{#1} \right)}
+\DeclareMathOperator{\Gain}{\text{Gain}}
+\newcommand{\gain}[1]{\Gain \left( \text{#1} \right)}
+\DeclareMathOperator{\ErrorRate}{\text{Error}}
+\newcommand{\error}[1]{\ErrorRate \left( \text{#1} \right)}
+
+
+
+
+\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
+\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
+\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} 
+% for vectors of Greek letters
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}} % for unit vector
+\newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
+\newcommand{\avg}[1]{\left< #1 \right>} % for average
+\let\underdot=\d % rename builtin command \d{} to \underdot{}
+\renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
+\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} 
+% for partial derivatives
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}} 
+% for double partial derivatives
+\newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2}
+ \right)_{#3}} % for thermodynamic partial derivatives
+\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
+\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
+ \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+\newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right|
+ #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
+\newcommand{\grad}[1]{\gv{\nabla} #1} % for gradient
+\let\divsymb=\div % rename builtin command \div to \divsymb
+\renewcommand{\div}[1]{\gv{\nabla} \cdot #1} % for divergence
+\newcommand{\curl}[1]{\gv{\nabla} \times #1} % for curl
+\let\baraccent=\= % rename builtin command \= to \baraccent
+\renewcommand{\=}[1]{\stackrel{#1}{=}} % for putting numbers above =
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+
+% ***********************************************************
+% ********************** END HEADER *************************
+% ***********************************************************
+
+% Easier commands for matrices
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+
+\newcommand{\bvm}{\begin{vmatrix}}
+\newcommand{\evm}{\end{vmatrix}}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\texttip}[2]{#1}
+
+
+% Easier commands for typical multivariate random variables
+\newcommand{\X}{\mathrm{X}}
+\newcommand{\Y}{\mathrm{Y}}
+\newcommand{\Z}{\mathrm{Z}}
+
+% Questions are often divided into sections (a,b,c...etc), this custom command creates sort of a subsubsub-section for these.
+\newcommand{\questi}[1]{\vspace{0.45cm}\textbf{#1}\vspace{0.25cm}\\}
+
+
+\title{\Huge REI502M - Introduction to Data Mining\\  \Large Report on Project 1}
+\author{Elías Snorrason}
+
+\setcounter{section}{0}
+\setcounter{secnumdepth}{2}
+
+\begin{document}
+
+% Following is a renewed commands for the subsection and subsubsection to make the spacing more comfortable. This is also how the \smallbosonloop diagram is added to each question.
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+{-3.25ex\@plus -1ex \@minus -.2ex}%
+{1.5ex \@plus .2ex}%
+{\small{$\smallbosonloopV \quad $} \quad \normalfont\large\bfseries\emph}}% 
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+{-3.25ex\@plus -1ex \@minus -.2ex}%
+{2.5ex \@plus .2ex}%
+{\normalfont\large\bfseries}}% 
+\makeatother
+
+\quad
+\vspace{3cm}
+\maketitle
+\setcounter{page}{1}
+\thispagestyle{fancy}
+%\lhead[rh-even]{Student:\\ \textbf{Elías Snorrason}}
+%\rhead[lh-even]{Teacher:\\ \textbf{Nikolay Gagunashvili}}
+
+\hrule
+\tableofcontents
+\newpage
+
+
+\vspace{3cm}
+%\begin{center}
+%\includegraphics[width=0.45\textwidth]{Haskoli_Islands_rett.jpg}
+%\end{center}
+
+\input{./intro}
+\input{./pre_processing}
+\input{./decision_tree_creation}
+%\input{./problems/D3-2}
+%\input{./problems/D3-3}
+%\input{./problems/D3-5}
+%
+\newpage
+
+\end{document}
