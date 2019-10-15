@@ -12,4 +12,55 @@ The class values are renamed as:
 \item was euthanized
 \end{itemize}
 
+\item The rectal temperature was discretized to throw out extreme values, using 8 bins.
+
+\item The pulse attribute was also discretized, this time into 8 bins with equal frequency.
+
+\item The respiratory rate was relabeled accordingly:
+\begin{itemize}
+\item Normal: 8-10 bpm
+\item Above Normal: 11-25 bpm
+\item Fast: 26-35 bpm
+\item Extreme: Over 35 bpm
 \end{itemize}
+
+\item Total protein was discretized into 5 bins
+\begin{itemize}
+\item < 5.5 gms/dL
+\item 5.5-6.4 gms/dL
+\item 6.5-7.5 gms/dL
+\item 7.6 - 10 gms/dL
+\item > 10 gms/dL
+\end{itemize}
+
+
+\item Abdomcentesis total protein was split into 3 bins
+\begin{itemize}
+\item 0- 1.5 gms/dL
+\item 1.6 - 3 gms/dL
+\item > 3 gms/dL
+\end{itemize}
+
+\item packed cell volume was split into 3 bins
+\begin{itemize}
+\item < 31 \%
+\item 31-50 \%
+\item > 50 \%
+\end{itemize}
+
+\item nasogastric reflux pH was split into 3 bins
+
+
+
+\end{itemize}
+
+
+The following attributes were removed from the dataset:
+\begin{itemize}
+\item Type of lesion :
+\item Subtype of lesion : 
+\item Pathology_cp_data
+\end{itemize}
+
+
+Note: Using the \verb|MergeManyValues| for numerical attribues...
