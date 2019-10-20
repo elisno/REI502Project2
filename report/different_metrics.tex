@@ -71,3 +71,39 @@ E.g. running
 The first rule can be considered as an obvious rule (non-existing lesions don't require surgical intervention).
 However, the next rule has identical support and confidence and can be useful in a diagnostic sense.
 The last rule can potentially help with making a prognosis (in select few cases).
+
+
+\subsection{Lift}
+We get 460 rules when we set $minlift = 4.0$ and run
+\begin{verbatim}
+	  weka.associations.Apriori -I -R -N 1000 -T 1 -C 4.0 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c 24
+\end{verbatim}
+With moderately high confidence, we get an interesting rule, which may be suitable for diagnosis:
+\begin{itemize}
+\item   \verb|8. peripheral pulse=Reduced|
+
+\verb|pain=Continous severe pain| 
+
+\verb|peristalsis=Absent| 
+
+\verb|nasogastric tube=None| 
+
+\verb|abdominocentesis appearance=Cloudy 41 |
+
+
+\verb|==>| 
+
+
+\verb|temperature of extremities=Cool| 
+
+\verb|abdominal distension=Severe |
+
+\verb|abdomen=Distended lg intestine 37 | 
+  
+\verb|conf:(0.9) < lift:(4.68)> lev:(0.08) [29] conv:(6.62)|
+
+\end{itemize}
+
+
+
+
