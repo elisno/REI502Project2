@@ -1,0 +1,45 @@
+stages:
+  # Compile LaTeX file to pdf
+  - build
+  # Deploy pdf to Ugla and/or GitLab Pages
+  - deploy
+
+# Create solution manual report02.pdf
+compile:
+  # Docker-image with LaTeX-compiler installed
+  image: timnn/texlive
+  stage: build
+  script:
+    - latexmk -pdf report02.tex
+  # Keep all pdf files
+  artifacts:
+    paths:
+      - "*.pdf"
+  # Only runs job when updating any MR or merging with staging / master branch
+  only:
+    - pushes
+    - web
+    - merge-requests
+    - staging
+    - master
+
+
+# Make a draft of report02.pdf on GitLab pages
+pages:
+  stage: deploy
+  environment:
+    name: Staging
+    url: elisno.gitlab.io/mplausnir/report02.pdf
+  # Copy artifact from compile-job
+  script:
+    - echo "Deploy to pages"
+    - mkdir public
+    - cp report02.pdf public
+  # pages-job requires to keep public-dir as an artifact
+  artifacts:
+    paths:
+      - public
+  # Only runs job when merging with staging / master branch
+  only:
+    - pushes
+
