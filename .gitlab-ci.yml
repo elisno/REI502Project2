@@ -10,11 +10,12 @@ compile:
   image: timnn/texlive
   stage: build
   script:
+    - cd report
     - latexmk -pdf report02.tex
   # Keep all pdf files
   artifacts:
     paths:
-      - "*.pdf"
+      - "report/*.pdf"
   # Only runs job when updating any MR or merging with staging / master branch
   only:
     - pushes
@@ -39,7 +40,7 @@ pages:
   artifacts:
     paths:
       - public
-  # Only runs job when merging with staging / master branch
+        # Only runs job when merging with staging / master branch
   only:
     - pushes
 
