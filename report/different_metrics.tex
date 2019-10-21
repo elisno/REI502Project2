@@ -106,4 +106,21 @@ With moderately high confidence, we get an interesting rule, which may be suitab
 
 
 
+\subsection{Leverage}
+Using this metric (e.g. $minleve = 0.1$) results in multiple rules with obvious correlations between their attributes.
+These rules are usually on the form:
+\begin{itemize}
+\item \verb|2. surgery=Treated without surgery| 
+
+\verb|outcome=Lived 110|
+
+
+\verb|   ==>|
+ 
+\verb|surgical lesion=No 97|
+
+\verb|conf:(0.88) lift:(2.39) < lev:(0.15) [56]> conv:(4.95)|
+\end{itemize}
+For this metric to be more useful, we need to remove more attributes from the data set.
+
 
