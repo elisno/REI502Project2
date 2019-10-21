@@ -35,7 +35,7 @@ pages:
   script:
     - echo "Deploy to pages"
     - mkdir public
-    - cp report02.pdf public
+    - cp report/report02.pdf public
   # pages-job requires to keep public-dir as an artifact
   artifacts:
     paths:
@@ -43,4 +43,3 @@ pages:
         # Only runs job when merging with staging / master branch
   only:
     - pushes
-
