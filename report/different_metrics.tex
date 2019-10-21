@@ -108,7 +108,15 @@ With moderately high confidence, we get an interesting rule, which may be suitab
 
 \subsection{Leverage}
 Using this metric (e.g. $minleve = 0.1$) results in multiple rules with obvious correlations between their attributes.
-These rules are usually on the form:
+
+\noindent
+Running
+\begin{verbatim}
+	  weka.associations.Apriori -N 100 -T 2 -C 0.1 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+\end{verbatim} 
+
+\noindent
+gives obvious rules on the form:
 \begin{itemize}
 \item \verb|2. surgery=Treated without surgery| 
 
@@ -124,3 +132,22 @@ These rules are usually on the form:
 For this metric to be more useful, we need to remove more attributes from the data set.
 
 
+\subsection{Conviction}
+Setting $minconv = 2.0$ and running
+\begin{verbatim}
+	  weka.associations.Apriori -N 100 -T 3 -C 2.0 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+\end{verbatim}
+results in one interesting rule:
+\begin{itemize}
+\item \verb|77. rectal temperature='(38.1-38.775]'|
+
+\verb|packed cell volume=31%-50% 89|
+
+\verb|==>|
+
+\verb|outcome=Lived 77|
+
+\verb|conf:(0.87) lift:(1.42) lev:(0.06) [22] < conv:(2.66)>|
+
+\end{itemize}
+Increasing $minconv$ results in rules similar to those found when using leverage as a metric. The number of relevant attributes needs to be reduced if we are to find more interesting rules with conviction as a metric.
