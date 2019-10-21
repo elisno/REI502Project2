@@ -1,0 +1,49 @@
+Apriori
+=======
+
+Minimum support: 0.1 (37 instances)
+Minimum metric <lift>: 4
+Significance level: 0.01
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 62
+
+Size of set of large itemsets L(2): 425
+
+Size of set of large itemsets L(3): 1015
+
+Size of set of large itemsets L(4): 1091
+
+Size of set of large itemsets L(5): 612
+
+Size of set of large itemsets L(6): 175
+
+Size of set of large itemsets L(7): 32
+
+Size of set of large itemsets L(8): 3
+
+Best rules found:
+
+  1. pain=Continous severe pain peristalsis=Absent nasogastric tube=None abdominocentesis appearance=Cloudy 44 ==> temperature of extremities=Cool peripheral pulse=Reduced abdominal distension=Severe abdomen=Distended lg intestine 37    conf:(0.84) < lift:(4.76)> lev:(0.08) [29] conv:(4.53)
+  
+  2. temperature of extremities=Cool peripheral pulse=Reduced abdominal distension=Severe abdomen=Distended lg intestine 65 ==> pain=Continous severe pain peristalsis=Absent nasogastric tube=None abdominocentesis appearance=Cloudy 37    conf:(0.57) < lift:(4.76)> lev:(0.08) [29] conv:(1.97)
+  
+  3. temperature of extremities=Cool pain=Continous severe pain nasogastric tube=None abdominocentesis appearance=Cloudy 45 ==> peripheral pulse=Reduced peristalsis=Absent abdominal distension=Severe abdomen=Distended lg intestine 37    conf:(0.82) < lift:(4.73)> lev:(0.08) [29] conv:(4.13)
+  
+  4. peripheral pulse=Reduced peristalsis=Absent abdominal distension=Severe abdomen=Distended lg intestine 64 ==> temperature of extremities=Cool pain=Continous severe pain nasogastric tube=None abdominocentesis appearance=Cloudy 37    conf:(0.58) < lift:(4.73)> lev:(0.08) [29] conv:(2.01)
+  
+  5. pain=Continous severe pain peristalsis=Absent nasogastric tube=None 51 ==> temperature of extremities=Cool peripheral pulse=Reduced abdominal distension=Severe abdominocentesis appearance=Cloudy abdomen=Distended lg intestine 37    conf:(0.73) < lift:(4.68)> lev:(0.08) [29] conv:(2.87)
+  
+  6. temperature of extremities=Cool peripheral pulse=Reduced abdominal distension=Severe abdominocentesis appearance=Cloudy abdomen=Distended lg intestine 57 ==> pain=Continous severe pain peristalsis=Absent nasogastric tube=None 37    conf:(0.65) < lift:(4.68)> lev:(0.08) [29] conv:(2.34)
+  
+  7. peripheral pulse=Reduced pain=Continous severe pain peristalsis=Absent nasogastric tube=None abdominocentesis appearance=Cloudy 41 ==> temperature of extremities=Cool abdominal distension=Severe abdomen=Distended lg intestine 37    conf:(0.9) < lift:(4.68)> lev:(0.08) [29] conv:(6.62)
+  
+  8. temperature of extremities=Cool abdominal distension=Severe abdomen=Distended lg intestine 71 ==> peripheral pulse=Reduced pain=Continous severe pain peristalsis=Absent nasogastric tube=None abdominocentesis appearance=Cloudy 37    conf:(0.52) < lift:(4.68)> lev:(0.08) [29] conv:(1.8)
+  
+  9. peripheral pulse=Reduced pain=Continous severe pain peristalsis=Absent nasogastric tube=None 47 ==> temperature of extremities=Cool abdominal distension=Severe abdominocentesis appearance=Cloudy abdomen=Distended lg intestine 37    conf:(0.79) < lift:(4.67)> lev:(0.08) [29] conv:(3.55)
+ 
+  10. temperature of extremities=Cool abdominal distension=Severe abdominocentesis appearance=Cloudy abdomen=Distended lg intestine 62 ==> peripheral pulse=Reduced pain=Continous severe pain peristalsis=Absent nasogastric tube=None 37    conf:(0.6) < lift:(4.67)> lev:(0.08) [29] conv:(2.08)
+ 
+  11. temperature of extremities=Cool peripheral pulse=Reduced abdominal distension=Severe nasogastric tube=None 54 ==> pain=Continous severe pain peristalsis=Absent abdominocentesis appearance=Cloudy abdomen=Distended lg intestine 37    conf:(0.69) < lift:(4.67)> lev:(0.08) [29] conv:(2.56)

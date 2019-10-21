@@ -1,0 +1,392 @@
+@relation 'horse-colic.ORIG-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,23-weka.filters.unsupervised.attribute.Discretize-B8-M-1.0-R4-precision6-weka.filters.unsupervised.attribute.Discretize-F-B8-M-1.0-R5-precision6-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.MergeManyValues-C6-LNormal-R1,2,3-weka.filters.unsupervised.attribute.MergeManyValues-C6-LAbove Normal-R1-7-weka.filters.unsupervised.attribute.MergeManyValues-C6-LFast-R1-11-weka.filters.unsupervised.attribute.MergeManyValues-C6-LExtreme-R1-19-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R22-precision6-weka.filters.unsupervised.attribute.MergeManyValues-C22-L0-1.5 gms/dl-R1-7-weka.filters.unsupervised.attribute.MergeManyValues-C22-L1.6-3 gms/dl-R1-11-weka.filters.unsupervised.attribute.MergeManyValues-C22-L>3 gms/dl-R1-26-weka.filters.unsupervised.attribute.MergeManyValues-C20-L<5.5 gms/dl-R1-9-weka.filters.unsupervised.attribute.MergeManyValues-C20-L5.5-6.4 gms/dl-R1-9-weka.filters.unsupervised.attribute.MergeManyValues-C20-L6.5-7.5 gms/dl-R1-11-weka.filters.unsupervised.attribute.MergeManyValues-C20-L7.6-10 gms/dl-R1-16-weka.filters.unsupervised.attribute.MergeManyValues-C20-L>10 gms/dl-R1-39-weka.filters.unsupervised.attribute.MergeManyValues-C19-L>31-R1-8-weka.filters.unsupervised.attribute.MergeManyValues-C19-L31-50-R1-22-weka.filters.unsupervised.attribute.MergeManyValues-C19-L>50\%-R1-24-weka.filters.unsupervised.attribute.RenameNominalValues-R19-N1:<31\%-weka.filters.unsupervised.attribute.RenameNominalValues-R19-N>31:<31\%-weka.filters.unsupervised.attribute.RenameNominalValues-R19-N31-50:31\%-50\%-weka.filters.unsupervised.attribute.MergeManyValues-C16-LSubnormal pH-R1-3-weka.filters.unsupervised.attribute.MergeManyValues-C16-LNormal pH-R1-5-weka.filters.unsupervised.attribute.MergeManyValues-C16-LAbove normal pH-R1-16-weka.filters.unsupervised.attribute.Remove-R25-27-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.RenameNominalValues-R1-N1:Yes,2:Treated without surgery-weka.filters.unsupervised.attribute.RenameNominalValues-R6-N1:Normal,2:Warm,3:Cool,4:Cold-weka.filters.unsupervised.attribute.RenameNominalValues-R7-N1:Normal,2:Increased,3:Reduced,4:Absent-weka.filters.unsupervised.attribute.RenameNominalValues-R8-N1:Normal pink,2:Bright pink,3:Pale pink,4:Pale cyanotic,5:Bright red,6:Dark cyanotic-weka.filters.unsupervised.attribute.RenameNominalValues-R9-N1:<3sec,2:>=3sec-weka.filters.unsupervised.attribute.RenameNominalValues-R9-N3:>=3sec-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N1:Alert. No pain,2:Depressed,3:Intermittent mild pain,4:Intermittent severe pain,5:Continous severe pain-weka.filters.unsupervised.attribute.RenameNominalValues-R11-N1:Hypermotile,2:Normal,3:Hypomotile,4:Absent-weka.filters.unsupervised.attribute.RenameNominalValues-R12-N1:None,2:Slight,3:Moderate,4:Severe-weka.filters.unsupervised.attribute.RenameNominalValues-R13-N1:None,2:Slight,3:Significant-weka.filters.unsupervised.attribute.RenameNominalValues-R14-N1:None,2:>1liter,3:<1liter-weka.filters.unsupervised.attribute.RenameNominalValues-R16-N1:Normal,2:Invreased,3:Decreased,4:Absent-weka.filters.unsupervised.attribute.RenameNominalValues-R17-N1:Normal,2:Other,3:Firm feces in the lg intestine,4:Distended small intestine,5:Distended lg intestine-weka.filters.unsupervised.attribute.RenameNominalValues-R20-N1:Clear,2:Cloudy,3:Serosanguinous-weka.filters.unsupervised.attribute.RenameNominalValues-R22-N1:Yes,2:No-weka.filters.unsupervised.attribute.RenameNominalValues-R24-N1:Lived,2:Died,3:Euthanized-weka.filters.unsupervised.attribute.MergeManyValues-C3-LBelow normal-R1-3-weka.filters.unsupervised.attribute.MergeManyValues-C3-LAbove normal-R3-5-weka.filters.unsupervised.attribute.MergeManyValues-C3-LNormal-R1,2-weka.filters.unsupervised.attribute.MergeManyValues-C5-LNormal-R1,2-weka.filters.unsupervised.attribute.Remove-R1,23-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R21-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,15'
+
+@attribute 'rectal temperature' {'Below normal','Above normal',Normal}
+@attribute pulse {'\'(-inf-43]\'','\'(43-48.5]\'','\'(48.5-58]\'','\'(58-64.5]\'','\'(64.5-77]\'','\'(77-89]\'','\'(89-109]\'','\'(109-inf)\''}
+@attribute 'respiratory rate' {Fast,Extreme,Normal}
+@attribute 'temperature of extremities' {Cool,Normal,Cold,Warm}
+@attribute 'peripheral pulse' {Reduced,Normal,Absent,Increased}
+@attribute 'mucous membranes' {'Pale cyanotic','Pale pink','Dark cyanotic','Normal pink','Bright red','Bright pink'}
+@attribute 'capillary refill time' {>=3sec,<3sec}
+@attribute pain {'Continous severe pain','Intermittent mild pain',Depressed,'Intermittent severe pain','Alert. No pain'}
+@attribute peristalsis {Absent,Hypomotile,Hypermotile,Normal}
+@attribute 'abdominal distension' {Severe,Slight,None,Moderate}
+@attribute 'nasogastric tube' {None,Slight,Significant}
+@attribute 'nasogastric reflux' {>1liter,None,<1liter}
+@attribute 'nasogastric reflux PH' {'Subnormal pH ','Normal pH ','Above normal pH '}
+@attribute 'rectal examination - feces' {Decreased,Absent,Normal,Invreased}
+@attribute 'packed cell volume' {'<31\%','31\%-50\%','>50\%'}
+@attribute 'total protein' {'<5.5 gms/dl','5.5-6.4 gms/dl','6.5-7.5 gms/dl','7.6-10 gms/dl','>10 gms/dl'}
+@attribute 'abdominocentesis appearance' {Cloudy,Serosanguinous,Clear}
+@attribute 'abdomcentesis total protein' {'0-1.5 gms/dl','1.6-3 gms/dl','>3 gms/dl'}
+@attribute 'surgical lesion' {No,Yes}
+@attribute abdomen {'Distended lg intestine',Other,Normal,'Firm feces in the lg intestine','Distended small intestine'}
+
+@data
+Normal,'\'(64.5-77]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Cold,Normal,'Dark cyanotic',>=3sec,Depressed,Absent,Severe,None,>1liter,'Above normal pH ',Decreased,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+'Below normal','\'(89-109]\'',Fast,Cool,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'>50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+?,'\'(58-64.5]\'',?,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Slight,Slight,None,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(89-109]\'',Fast,Normal,Normal,'Bright pink',<3sec,'Alert. No pain',Hypomotile,Slight,Significant,>1liter,'Above normal pH ',Normal,'31\%-50\%','5.5-6.4 gms/dl',Clear,?,No,Normal
+Normal,'\'(89-109]\'',Extreme,Cool,Normal,'Pale cyanotic',<3sec,'Continous severe pain',Hypomotile,Moderate,Slight,<1liter,'Above normal pH ',Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(109-inf)\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,'Intermittent severe pain',Absent,Moderate,Significant,>1liter,?,Absent,'>50\%','7.6-10 gms/dl',Serosanguinous,'>3 gms/dl',No,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(89-109]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,Significant,>1liter,'Normal pH ',Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(77-89]\'',?,Cool,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Hypomotile,Moderate,None,<1liter,?,Absent,'>50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,'Distended lg intestine'
+?,'\'(109-inf)\'',?,Cold,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Absent,'>50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',Extreme,Cool,Reduced,'Pale pink',>=3sec,Depressed,Hypomotile,Moderate,Slight,>1liter,'Above normal pH ',Decreased,'>50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,Normal
+'Below normal','\'(77-89]\'',Extreme,Cool,Reduced,'Bright red',>=3sec,'Intermittent severe pain',Hypermotile,Slight,None,>1liter,?,Invreased,'>50\%','5.5-6.4 gms/dl',Cloudy,'>3 gms/dl',No,Normal
+'Below normal','\'(77-89]\'',Extreme,Normal,Reduced,'Pale pink',>=3sec,'Intermittent mild pain',Hypomotile,Slight,None,>1liter,?,Absent,'<31\%',?,Serosanguinous,?,Yes,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Normal,Cool,Reduced,'Bright red',<3sec,'Intermittent mild pain',Hypomotile,Severe,Significant,>1liter,?,Absent,'31\%-50\%',?,Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(58-64.5]\'',Extreme,Warm,Reduced,'Bright pink',<3sec,'Continous severe pain',Hypomotile,Moderate,Slight,>1liter,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,?,Normal,Cold,Reduced,'Pale pink',>=3sec,'Continous severe pain',Absent,Moderate,Slight,>1liter,?,Absent,'>50\%','5.5-6.4 gms/dl',Serosanguinous,?,Yes,'Distended small intestine'
+?,'\'(89-109]\'',?,Cool,Reduced,'Pale pink',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Absent,'>50\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Warm,Normal,'Bright pink',<3sec,'Intermittent mild pain',Absent,Severe,Slight,>1liter,?,Absent,'>50\%','7.6-10 gms/dl',Clear,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Fast,Normal,Normal,'Bright red',<3sec,'Intermittent severe pain',Hypomotile,None,Slight,<1liter,'Above normal pH ',Normal,'>50\%','6.5-7.5 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','<5.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale pink',>=3sec,'Continous severe pain',Hypomotile,Moderate,Significant,>1liter,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(89-109]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,'Intermittent severe pain',Hypomotile,Slight,None,>1liter,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,?,Fast,Cool,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(77-89]\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Moderate,Significant,>1liter,?,Absent,'31\%-50\%','7.6-10 gms/dl',Serosanguinous,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Cool,Reduced,'Normal pink',>=3sec,Depressed,Hypomotile,Moderate,Slight,None,'Above normal pH ',Normal,'>50\%','7.6-10 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Normal pink',<3sec,'Continous severe pain',Hypomotile,Moderate,None,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Fast,Normal,Reduced,'Pale pink',<3sec,'Intermittent severe pain',Absent,None,Slight,<1liter,'Above normal pH ',Invreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Extreme,Cool,Reduced,'Bright pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,None,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(64.5-77]\'',Normal,Cool,Absent,'Bright red',>=3sec,Depressed,Hypomotile,Slight,Slight,None,?,Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(58-64.5]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Fast,Normal,Normal,'Pale pink',<3sec,'Intermittent severe pain',Absent,Moderate,Slight,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Clear,'1.6-3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Extreme,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,<1liter,'Subnormal pH ',Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(89-109]\'',?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,Slight,>1liter,?,Invreased,'>50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Extreme,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Hypermotile,Moderate,Slight,>1liter,'Normal pH ',Invreased,'31\%-50\%','<5.5 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale pink',>=3sec,'Continous severe pain',Hypomotile,Moderate,Significant,>1liter,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(-inf-43]\'',Fast,Cool,Reduced,'Bright red',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'>50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+?,'\'(109-inf)\'',?,Cold,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Absent,'>50\%','<5.5 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Warm,Normal,'Pale pink',<3sec,'Intermittent mild pain',Absent,Moderate,None,>1liter,'Above normal pH ',Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+'Above normal',?,?,Cold,Reduced,'Dark cyanotic',>=3sec,'Intermittent severe pain',Absent,Slight,None,<1liter,'Normal pH ',Absent,'>50\%',?,Serosanguinous,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',Normal,Cool,Reduced,'Bright red',>=3sec,'Intermittent mild pain',Hypomotile,Moderate,None,>1liter,?,Decreased,'>50\%','5.5-6.4 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(89-109]\'',?,Cool,Reduced,'Bright red',>=3sec,Depressed,Absent,Moderate,None,<1liter,?,Absent,'>50\%','7.6-10 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended small intestine'
+?,?,?,Cool,Absent,'Dark cyanotic',>=3sec,'Intermittent severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(64.5-77]\'',Normal,Cool,Reduced,'Pale cyanotic',<3sec,'Intermittent severe pain',Absent,Severe,None,None,'Normal pH ',Decreased,'<31\%',?,Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Cool,Normal,'Bright red',>=3sec,'Intermittent severe pain',Hypomotile,Moderate,Slight,<1liter,'Above normal pH ',Absent,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,'Distended small intestine'
+Normal,?,Fast,Cool,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(58-64.5]\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,'Intermittent severe pain',Hypomotile,Severe,None,>1liter,?,Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,Depressed,Absent,Slight,None,>1liter,?,Absent,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',?,Normal,Normal,'Pale pink',<3sec,'Intermittent severe pain',Absent,Moderate,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,'>3 gms/dl',Yes,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Normal,Cool,Normal,'Bright pink',<3sec,Depressed,Absent,Slight,None,>1liter,?,Normal,'31\%-50\%','<5.5 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Cold,Reduced,'Pale cyanotic',<3sec,Depressed,Absent,Severe,None,None,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Clear,'>3 gms/dl',Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Normal,Cold,Reduced,'Bright red',>=3sec,Depressed,Hypomotile,Moderate,None,<1liter,?,Decreased,'>50\%','7.6-10 gms/dl',Serosanguinous,?,Yes,'Distended small intestine'
+'Above normal','\'(89-109]\'',Fast,Cool,Reduced,'Dark cyanotic',<3sec,'Continous severe pain',Absent,None,None,<1liter,?,Absent,'>50\%','5.5-6.4 gms/dl',Cloudy,'>3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Fast,Normal,Normal,'Bright red',<3sec,'Intermittent severe pain',Hypomotile,None,Slight,<1liter,'Above normal pH ',Normal,'>50\%','6.5-7.5 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',Fast,Cold,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Absent,'>50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(-inf-43]\'',Fast,Normal,Normal,'Pale cyanotic',<3sec,'Continous severe pain',Hypomotile,Moderate,Slight,<1liter,'Normal pH ',Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+?,'\'(89-109]\'',?,Cool,Reduced,'Pale pink',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Absent,'>50\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Moderate,Slight,None,?,Decreased,'31\%-50\%','<5.5 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+'Below normal','\'(-inf-43]\'',Normal,Cool,Reduced,'Bright pink',<3sec,'Alert. No pain',Absent,None,None,None,?,Decreased,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Cool,Normal,'Bright pink',<3sec,Depressed,Hypomotile,Severe,None,None,?,Absent,'31\%-50\%','7.6-10 gms/dl',Serosanguinous,?,Yes,'Distended small intestine'
+'Above normal','\'(109-inf)\'',Extreme,Normal,Reduced,'Normal pink',<3sec,'Intermittent severe pain',Hypermotile,Moderate,None,>1liter,?,Invreased,'31\%-50\%','<5.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Severe,None,<1liter,'Above normal pH ',Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(64.5-77]\'',Extreme,Cool,Reduced,'Normal pink',<3sec,Depressed,Hypomotile,None,Slight,None,?,Decreased,'>50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,'Distended lg intestine'
+'Below normal','\'(64.5-77]\'',Extreme,Cool,Reduced,'Pale pink',>=3sec,'Intermittent severe pain',Absent,Slight,Slight,<1liter,'Above normal pH ',Absent,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(58-64.5]\'',Extreme,Cool,Reduced,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,Slight,>1liter,'Normal pH ',Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(109-inf)\'',Fast,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Hypomotile,Moderate,None,None,?,Decreased,'>50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Normal,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Hypomotile,Slight,None,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',?,Cool,Reduced,'Bright red',<3sec,Depressed,Hypomotile,None,None,None,?,Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,Normal
+?,'\'(64.5-77]\'',Normal,Cool,Absent,'Bright red',>=3sec,Depressed,Hypomotile,Slight,Slight,None,?,Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',Extreme,Cool,Reduced,'Pale pink',<3sec,Depressed,Hypomotile,Moderate,Slight,>1liter,'Above normal pH ',Decreased,'>50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,Normal
+'Below normal','\'(64.5-77]\'',Normal,Normal,Reduced,'Bright pink',<3sec,'Intermittent severe pain',Hypomotile,Moderate,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Cold,Reduced,'Pale cyanotic',<3sec,'Intermittent severe pain',Absent,Moderate,Slight,None,?,Decreased,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',Normal,Cool,Normal,'Bright red',<3sec,Depressed,Absent,Slight,None,>1liter,'Above normal pH ',Decreased,'>50\%','5.5-6.4 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended small intestine'
+?,'\'(109-inf)\'',?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Decreased,'<31\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Extreme,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Absent,Severe,Slight,>1liter,'Above normal pH ',Absent,'>50\%','6.5-7.5 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Normal,Warm,Reduced,'Pale pink',<3sec,'Intermittent severe pain',Hypomotile,Moderate,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,?,Yes,'Distended lg intestine'
+?,'\'(109-inf)\'',Extreme,Cold,Absent,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Cool,Normal,'Bright red',>=3sec,'Intermittent severe pain',Hypomotile,Moderate,Slight,<1liter,'Above normal pH ',Absent,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,'Distended small intestine'
+Normal,'\'(77-89]\'',Extreme,Cold,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Hypomotile,None,None,<1liter,'Above normal pH ',Decreased,'>50\%','6.5-7.5 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(77-89]\'',?,Cool,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+?,?,?,Cool,Normal,'Normal pink',<3sec,Depressed,Hypomotile,Moderate,None,<1liter,'Above normal pH ',Absent,'<31\%',?,Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(77-89]\'',Extreme,Cold,Absent,'Dark cyanotic',>=3sec,'Intermittent mild pain',Hypomotile,Moderate,None,>1liter,?,Normal,'>50\%','5.5-6.4 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Extreme,Cold,Absent,'Dark cyanotic',>=3sec,'Intermittent mild pain',Hypomotile,Moderate,None,>1liter,?,Normal,'>50\%','5.5-6.4 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Extreme,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,<1liter,'Subnormal pH ',Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',Normal,Cool,Reduced,'Pale cyanotic',<3sec,'Intermittent mild pain',Absent,Slight,None,>1liter,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',No,Other
+?,'\'(77-89]\'',Extreme,Cool,Absent,'Pale pink',<3sec,'Intermittent severe pain',Absent,Severe,Slight,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(89-109]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,Depressed,Absent,Slight,None,<1liter,'Above normal pH ',Decreased,'>50\%','7.6-10 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Firm feces in the lg intestine'
+?,'\'(89-109]\'',Fast,Cold,Reduced,'Pale pink',>=3sec,'Intermittent severe pain',Absent,Moderate,None,<1liter,?,Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,Other
+Normal,'\'(109-inf)\'',Normal,Cool,Reduced,'Bright red',>=3sec,'Continous severe pain',Absent,None,None,>1liter,?,Decreased,'>50\%','5.5-6.4 gms/dl',Cloudy,'0-1.5 gms/dl',No,'Distended lg intestine'
+?,'\'(109-inf)\'',?,Cool,Absent,'Pale cyanotic',<3sec,'Intermittent severe pain',Absent,Severe,None,None,?,Decreased,'>50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+'Below normal','\'(109-inf)\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Intermittent severe pain',Absent,Severe,Slight,None,?,Decreased,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Cool,Reduced,'Normal pink',>=3sec,Depressed,Hypomotile,Moderate,Slight,None,'Above normal pH ',Normal,'>50\%','7.6-10 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Normal,Cold,Reduced,'Pale cyanotic',>=3sec,Depressed,Absent,Severe,None,None,?,Decreased,'>50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',No,'Distended lg intestine'
+'Below normal','\'(58-64.5]\'',Normal,Cool,Reduced,'Pale cyanotic',<3sec,'Intermittent mild pain',Absent,Moderate,Slight,>1liter,'Above normal pH ',Absent,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+'Above normal','\'(89-109]\'',?,Cool,Reduced,'Bright red',>=3sec,Depressed,Hypomotile,Severe,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(-inf-43]\'',Normal,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,Depressed,Hypomotile,Moderate,None,<1liter,'Subnormal pH ',Absent,'>50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+?,'\'(58-64.5]\'',Normal,Cold,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Absent,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Fast,Cold,Reduced,'Bright pink',>=3sec,'Intermittent severe pain',Absent,Severe,None,>1liter,?,Absent,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+'Above normal',?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Intermittent mild pain',Absent,Moderate,None,<1liter,'Above normal pH ',Absent,'<31\%','6.5-7.5 gms/dl',Clear,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Extreme,Cool,Reduced,'Dark cyanotic',>=3sec,'Intermittent severe pain',Hypomotile,None,None,>1liter,?,Normal,'>50\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Pale cyanotic',<3sec,'Alert. No pain',Hypermotile,Moderate,Slight,None,?,Normal,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,Normal
+'Below normal','\'(77-89]\'',Normal,Cool,Reduced,'Pale pink',<3sec,Depressed,Hypomotile,Moderate,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',No,'Distended lg intestine'
+'Below normal','\'(77-89]\'',Extreme,Cool,Reduced,'Dark cyanotic',<3sec,Depressed,Absent,Severe,Significant,>1liter,'Subnormal pH ',Absent,'>50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Fast,Normal,Reduced,'Pale pink',>=3sec,'Continous severe pain',Absent,Severe,Slight,<1liter,'Subnormal pH ',Decreased,'>50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Normal,Normal,Reduced,'Pale pink',<3sec,'Continous severe pain',Hypomotile,None,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Cool,Reduced,'Bright red',<3sec,'Continous severe pain',Hypomotile,Moderate,None,>1liter,?,Absent,'>50\%','>10 gms/dl',Clear,'1.6-3 gms/dl',No,'Distended lg intestine'
+?,'\'(64.5-77]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,Significant,None,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',?,Cool,Reduced,'Bright red',>=3sec,'Intermittent severe pain',Hypomotile,Severe,Slight,None,?,Absent,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Normal,Normal,Normal,'Bright red',>=3sec,Depressed,Normal,None,Slight,None,?,Invreased,'>50\%','6.5-7.5 gms/dl',Cloudy,'1.6-3 gms/dl',No,'Firm feces in the lg intestine'
+Normal,'\'(43-48.5]\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',?,Cool,Reduced,'Bright red',>=3sec,'Intermittent severe pain',Hypomotile,Severe,Slight,None,?,Absent,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(77-89]\'',Extreme,Cool,Reduced,'Bright red',>=3sec,'Continous severe pain',Hypomotile,Moderate,Slight,<1liter,?,Absent,'>50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Extreme,Normal,Increased,'Bright pink',<3sec,Depressed,Normal,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',Extreme,Cold,Absent,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,'1.6-3 gms/dl',No,'Distended lg intestine'
+'Below normal','\'(89-109]\'',Extreme,Cool,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Absent,Moderate,Slight,>1liter,?,Normal,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+'Below normal','\'(77-89]\'',?,Cool,Reduced,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,Slight,<1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(64.5-77]\'',Fast,Cool,Normal,'Pale cyanotic',<3sec,'Continous severe pain',Hypomotile,Severe,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(89-109]\'',Extreme,Cold,Absent,'Dark cyanotic',<3sec,Depressed,Absent,None,None,<1liter,'Subnormal pH ',Decreased,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(64.5-77]\'',?,Warm,Normal,'Normal pink',<3sec,Depressed,Hypermotile,None,None,None,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(48.5-58]\'',Extreme,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,None,Slight,None,?,Normal,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(64.5-77]\'',?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Normal,'Normal pink',<3sec,'Intermittent severe pain',Normal,Slight,Significant,<1liter,'Subnormal pH ',Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(77-89]\'',Normal,Cool,Normal,'Normal pink',>=3sec,'Intermittent severe pain',Absent,Moderate,None,<1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(77-89]\'',Fast,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Hypomotile,Severe,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',No,'Distended small intestine'
+?,'\'(109-inf)\'',Extreme,Cold,Reduced,'Pale cyanotic',>=3sec,Depressed,Absent,Severe,None,>1liter,?,Decreased,'>50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Below normal','\'(64.5-77]\'',Fast,Cool,Increased,'Pale cyanotic',>=3sec,'Intermittent severe pain',Hypomotile,Moderate,Significant,None,?,Absent,'31\%-50\%',?,Serosanguinous,'>3 gms/dl',Yes,'Distended small intestine'
+'Below normal','\'(-inf-43]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Absent,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',No,Normal
+'Below normal','\'(48.5-58]\'',Fast,Cool,Normal,'Pale cyanotic',>=3sec,'Intermittent severe pain',Absent,Moderate,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',No,'Distended lg intestine'
+'Above normal','\'(89-109]\'',Fast,Cool,Reduced,'Dark cyanotic',>=3sec,'Intermittent severe pain',Absent,Moderate,None,>1liter,?,Absent,'>50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(89-109]\'',Normal,Cold,Reduced,'Dark cyanotic',>=3sec,Depressed,Absent,Moderate,None,None,?,Absent,'>50\%','5.5-6.4 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(77-89]\'',Extreme,Cool,Normal,'Pale cyanotic',<3sec,Depressed,Hypomotile,Moderate,None,<1liter,?,Absent,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(58-64.5]\'',Normal,Normal,Normal,'Pale pink',<3sec,Depressed,Hypomotile,Slight,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Fast,Warm,Reduced,'Pale pink',<3sec,Depressed,Hypomotile,Severe,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+'Below normal','\'(43-48.5]\'',Normal,Cool,Normal,'Pale pink',<3sec,'Intermittent severe pain',Hypermotile,None,None,None,?,Decreased,'<31\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Normal,Normal,Normal,'Bright pink',<3sec,Depressed,Hypermotile,None,None,None,?,Normal,'31\%-50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Fast,Normal,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,None,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,Normal
+?,?,?,Warm,Normal,'Pale pink',<3sec,Depressed,Hypomotile,Slight,Slight,None,?,Decreased,'<31\%',?,Cloudy,?,No,'Firm feces in the lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,None,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',?,Normal,Reduced,'Normal pink',<3sec,'Continous severe pain',Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,'1.6-3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Normal,Cool,Reduced,'Bright red',<3sec,'Intermittent mild pain',Hypomotile,None,Slight,None,'Normal pH ',Invreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended lg intestine'
+'Above normal','\'(64.5-77]\'',Extreme,Warm,Reduced,'Bright pink',<3sec,Depressed,Hypermotile,Slight,None,None,?,Absent,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+'Below normal','\'(-inf-43]\'',Normal,Warm,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Significant,None,?,Absent,'<31\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Absent,None,Slight,>1liter,?,Absent,'31\%-50\%','>10 gms/dl',Clear,'1.6-3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(43-48.5]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Fast,Normal,Normal,'Bright pink',<3sec,Depressed,Hypomotile,None,None,None,?,Invreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,?,Yes,'Distended lg intestine'
+'Above normal','\'(109-inf)\'',Fast,Cold,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Hypomotile,Moderate,None,>1liter,?,Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Above normal','\'(64.5-77]\'',Extreme,Normal,Normal,'Bright red',>=3sec,'Continous severe pain',Absent,Severe,Significant,None,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Reduced,'Normal pink',<3sec,'Alert. No pain',Hypomotile,None,Slight,<1liter,'Above normal pH ',Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Firm feces in the lg intestine'
+Normal,'\'(-inf-43]\'',Fast,Warm,Normal,'Pale cyanotic',>=3sec,Depressed,Hypomotile,None,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Extreme,Cool,Reduced,'Pale cyanotic',<3sec,Depressed,Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Normal,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Absent,Moderate,Significant,>1liter,'Subnormal pH ',Decreased,'>50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Extreme,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Cold,Reduced,'Pale pink',>=3sec,'Intermittent mild pain',Hypomotile,Moderate,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',<3sec,'Continous severe pain',Hypomotile,Slight,None,None,?,Normal,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'0-1.5 gms/dl',No,'Firm feces in the lg intestine'
+Normal,'\'(43-48.5]\'',?,Warm,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Below normal','\'(58-64.5]\'',?,Warm,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Slight,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Fast,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypermotile,Severe,None,>1liter,?,Absent,'31\%-50\%','7.6-10 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended small intestine'
+?,'\'(89-109]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,Significant,<1liter,?,Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(64.5-77]\'',?,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Hypomotile,None,None,None,?,Normal,'>50\%','>10 gms/dl',Clear,'1.6-3 gms/dl',Yes,Normal
+Normal,'\'(48.5-58]\'',?,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Clear,'>3 gms/dl',No,'Firm feces in the lg intestine'
+'Above normal','\'(109-inf)\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Normal,Cool,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,None,None,None,?,Invreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,Other
+Normal,'\'(58-64.5]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,Slight,>1liter,?,Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,None,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',?,Normal,Normal,'Bright pink',<3sec,'Alert. No pain',Hypomotile,Slight,None,None,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Clear,'1.6-3 gms/dl',No,Other
+?,?,?,Normal,Normal,'Pale pink',<3sec,'Alert. No pain',Hypomotile,None,None,>1liter,?,Invreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,No,Other
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Fast,Normal,Normal,'Pale pink',<3sec,Depressed,Hypermotile,Severe,None,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',?,Warm,Increased,'Normal pink',<3sec,'Alert. No pain',Normal,Slight,Slight,None,?,Normal,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,No,Normal
+'Above normal','\'(58-64.5]\'',Extreme,Cool,Normal,'Pale cyanotic',>=3sec,'Intermittent mild pain',Hypomotile,Slight,None,>1liter,'Above normal pH ',Absent,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(58-64.5]\'',Extreme,Cool,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,None,?,Decreased,'<31\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(64.5-77]\'',?,Normal,Normal,'Bright red',>=3sec,'Intermittent mild pain',Hypomotile,None,None,<1liter,'Subnormal pH ',Decreased,'>50\%','>10 gms/dl',Clear,'1.6-3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(48.5-58]\'',Fast,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,?,No,Other
+?,'\'(48.5-58]\'',Normal,Normal,Reduced,'Pale pink',<3sec,'Continous severe pain',Absent,Severe,Slight,<1liter,'Above normal pH ',Decreased,'>50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypomotile,Severe,None,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'>3 gms/dl',No,Other
+Normal,'\'(43-48.5]\'',Fast,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Normal,None,Slight,>1liter,?,Normal,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'>3 gms/dl',No,Normal
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Normal,Warm,Reduced,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,None,None,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(89-109]\'',Normal,Normal,Reduced,'Dark cyanotic',>=3sec,'Intermittent mild pain',Absent,Slight,Slight,<1liter,'Above normal pH ',Decreased,'>50\%','7.6-10 gms/dl',Serosanguinous,?,Yes,'Distended small intestine'
+'Below normal','\'(-inf-43]\'',?,Cool,Reduced,'Normal pink',<3sec,Depressed,Hypomotile,Slight,Significant,None,?,Decreased,'31\%-50\%',?,Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',Extreme,Cool,Normal,'Bright pink',<3sec,'Intermittent mild pain',Absent,None,None,>1liter,?,Normal,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Extreme,Normal,Reduced,'Bright pink',>=3sec,Depressed,Hypomotile,Moderate,None,>1liter,'Above normal pH ',Absent,'31\%-50\%','<5.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Fast,Warm,Reduced,'Pale pink',>=3sec,'Intermittent mild pain',Hypermotile,Slight,Slight,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,'Distended small intestine'
+'Above normal','\'(58-64.5]\'',Extreme,Normal,Normal,'Bright red',<3sec,'Intermittent mild pain',Hypomotile,Slight,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'1.6-3 gms/dl',No,'Firm feces in the lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,Depressed,Absent,Severe,None,<1liter,'Subnormal pH ',Normal,'>50\%','>10 gms/dl',Cloudy,?,Yes,Normal
+'Above normal','\'(48.5-58]\'',Normal,Cool,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,Slight,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(43-48.5]\'',Fast,Cold,Normal,'Pale pink',<3sec,'Continous severe pain',Normal,None,None,None,?,Normal,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,No,Normal
+'Below normal','\'(43-48.5]\'',Normal,Cool,Normal,'Bright pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(77-89]\'',Extreme,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,Other
+Normal,'\'(43-48.5]\'',Extreme,Warm,Normal,'Pale pink',<3sec,'Alert. No pain',Hypomotile,Slight,None,None,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Above normal','\'(89-109]\'',Extreme,Cool,Reduced,'Dark cyanotic',>=3sec,Depressed,Absent,Moderate,None,>1liter,?,Decreased,'>50\%','7.6-10 gms/dl',Cloudy,'1.6-3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Normal pink',<3sec,'Alert. No pain',Hypomotile,Severe,None,>1liter,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Normal pink',<3sec,Depressed,Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Extreme,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,>1liter,?,Invreased,'31\%-50\%','<5.5 gms/dl',Cloudy,?,Yes,Normal
+?,'\'(64.5-77]\'',Extreme,Normal,Reduced,'Pale pink',>=3sec,Depressed,Hypomotile,Slight,Slight,>1liter,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Extreme,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Absent,Severe,None,None,?,Normal,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(48.5-58]\'',Fast,Normal,Normal,'Pale pink',<3sec,'Alert. No pain',Hypomotile,Slight,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Pale cyanotic',<3sec,'Alert. No pain',Hypomotile,Slight,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Clear,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(-inf-43]\'',?,Warm,Normal,'Normal pink',<3sec,'Alert. No pain',Hypomotile,None,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Moderate,Slight,None,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,?,Extreme,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Slight,None,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(77-89]\'',Fast,Normal,Reduced,'Normal pink',<3sec,'Continous severe pain',Hypomotile,None,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Normal,Warm,Normal,'Bright pink',<3sec,'Alert. No pain',Hypomotile,None,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Above normal','\'(48.5-58]\'',Extreme,Normal,Normal,'Bright pink',<3sec,Depressed,Hypomotile,Slight,None,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Fast,Warm,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypermotile,None,None,>1liter,?,Normal,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Extreme,Cold,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,Slight,>1liter,?,Absent,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,?,?,Cool,Normal,'Pale pink',<3sec,'Continous severe pain',Absent,Slight,None,>1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(48.5-58]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,'Intermittent severe pain',Absent,None,Slight,None,?,Normal,'31\%-50\%','7.6-10 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',?,Cool,Reduced,'Normal pink',<3sec,'Continous severe pain',Absent,None,Slight,None,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Fast,Normal,Normal,'Normal pink',<3sec,Depressed,Hypomotile,None,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Firm feces in the lg intestine'
+Normal,'\'(43-48.5]\'',?,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Normal,Severe,Slight,>1liter,?,Absent,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',?,Normal,Increased,'Pale pink',<3sec,'Alert. No pain',Hypermotile,None,None,None,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(58-64.5]\'',Fast,Normal,Normal,'Pale cyanotic',<3sec,'Intermittent mild pain',Hypomotile,Severe,None,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',<3sec,Depressed,Normal,None,None,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Fast,Normal,Normal,'Normal pink',>=3sec,'Alert. No pain',Normal,None,Slight,>1liter,?,Normal,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'>3 gms/dl',No,Normal
+?,'\'(77-89]\'',Fast,Cool,Reduced,'Bright pink',<3sec,Depressed,Hypomotile,Moderate,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',?,Normal,Reduced,'Pale pink',<3sec,'Intermittent mild pain',Absent,Severe,None,<1liter,'Subnormal pH ',Absent,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(109-inf)\'',?,Cool,Reduced,'Dark cyanotic',>=3sec,Depressed,Absent,Slight,Slight,<1liter,'Above normal pH ',Absent,'>50\%','7.6-10 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(43-48.5]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Alert. No pain',Hypermotile,Severe,None,None,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Above normal','\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',<3sec,Depressed,Hypomotile,Slight,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Other
+?,'\'(89-109]\'',?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,Slight,None,'Subnormal pH ',Decreased,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',<3sec,'Alert. No pain',Hypomotile,Slight,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,?,No,Other
+'Above normal','\'(43-48.5]\'',Extreme,Normal,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,Severe,Slight,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Reduced,'Pale cyanotic',<3sec,'Alert. No pain',Absent,Slight,Slight,>1liter,'Above normal pH ',Decreased,'31\%-50\%','7.6-10 gms/dl',Clear,?,No,Other
+Normal,'\'(48.5-58]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Clear,'>3 gms/dl',No,'Firm feces in the lg intestine'
+Normal,'\'(-inf-43]\'',Extreme,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,None,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+?,?,Normal,Normal,Normal,'Bright pink',<3sec,Depressed,Hypermotile,Slight,Significant,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Firm feces in the lg intestine'
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Intermittent severe pain',Absent,Severe,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+'Above normal','\'(58-64.5]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,'Intermittent mild pain',Hypomotile,Slight,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Clear,?,No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',?,Normal,Normal,'Bright red',>=3sec,'Intermittent mild pain',Hypomotile,Slight,Slight,>1liter,?,Absent,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypermotile,None,None,>1liter,?,Invreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,?,No,Normal
+?,'\'(43-48.5]\'',Fast,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,None,Slight,None,?,Decreased,'<31\%','5.5-6.4 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(89-109]\'',Extreme,Normal,Normal,'Pale pink',<3sec,Depressed,Absent,Slight,Slight,<1liter,'Above normal pH ',Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Normal,'Pale pink',<3sec,'Continous severe pain',Hypermotile,None,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Extreme,Cool,Reduced,'Pale pink',<3sec,Depressed,Absent,Moderate,None,<1liter,'Subnormal pH ',Decreased,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Fast,Normal,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,Other
+?,'\'(58-64.5]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Absent,'31\%-50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Reduced,'Normal pink',<3sec,'Intermittent mild pain',Absent,Slight,None,<1liter,'Above normal pH ',Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Normal,Normal,Normal,'Bright pink',<3sec,Depressed,Hypermotile,None,Slight,None,?,Normal,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Warm,Increased,'Bright pink',<3sec,'Alert. No pain',Hypermotile,None,Significant,None,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(109-inf)\'',Extreme,Cold,Reduced,'Dark cyanotic',>=3sec,'Continous severe pain',Hypomotile,Severe,None,>1liter,?,Decreased,'>50\%',?,Cloudy,?,Yes,'Distended lg intestine'
+'Above normal','\'(58-64.5]\'',Extreme,Warm,Reduced,'Normal pink',<3sec,'Continous severe pain',Hypomotile,None,None,>1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Cold,Reduced,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Significant,<1liter,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',?,Normal,Normal,'Pale cyanotic',<3sec,'Continous severe pain',Hypermotile,None,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Clear,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Normal,Cool,Normal,'Normal pink',<3sec,Depressed,Hypermotile,None,Slight,>1liter,'Normal pH ',Normal,'<31\%','5.5-6.4 gms/dl',Clear,'1.6-3 gms/dl',Yes,'Distended small intestine'
+'Below normal','\'(-inf-43]\'',Normal,Cool,Normal,'Pale cyanotic',<3sec,'Intermittent mild pain',Hypomotile,None,None,None,?,Decreased,'<31\%','6.5-7.5 gms/dl',Serosanguinous,?,Yes,'Firm feces in the lg intestine'
+?,'\'(89-109]\'',Extreme,Warm,Normal,'Normal pink',<3sec,'Intermittent severe pain',Hypermotile,None,None,>1liter,?,Normal,'31\%-50\%','<5.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,None,>1liter,?,Absent,'31\%-50\%','>10 gms/dl',Clear,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Normal,Normal,'Bright pink',<3sec,Depressed,Normal,None,None,>1liter,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',>=3sec,'Continous severe pain',Hypermotile,Slight,None,>1liter,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Normal,Normal,Normal,'Normal pink',>=3sec,'Alert. No pain',Hypomotile,None,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Extreme,Cool,Normal,'Bright pink',<3sec,Depressed,Hypermotile,Slight,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Other
+'Below normal','\'(43-48.5]\'',Normal,Normal,Reduced,'Pale pink',<3sec,'Intermittent mild pain',Hypermotile,Moderate,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Firm feces in the lg intestine'
+'Below normal','\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',<3sec,Depressed,Hypomotile,None,Slight,None,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,Normal
+'Above normal',?,Fast,Cool,Normal,'Pale pink',<3sec,'Intermittent severe pain',Absent,Slight,Slight,>1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',Fast,Warm,Reduced,'Pale cyanotic',>=3sec,'Intermittent severe pain',Absent,Moderate,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypermotile,Slight,Slight,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',No,'Firm feces in the lg intestine'
+'Above normal','\'(109-inf)\'',Fast,Normal,Reduced,'Bright pink',>=3sec,'Intermittent mild pain',Hypomotile,Moderate,Significant,None,'Normal pH ',Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Pale pink',<3sec,'Continous severe pain',Normal,Slight,Slight,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(48.5-58]\'',Fast,Warm,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,Slight,>1liter,?,Invreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'1.6-3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Normal,None,Slight,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,Other
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'>50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(48.5-58]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,'Intermittent mild pain',Absent,Moderate,Slight,None,?,Absent,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(89-109]\'',Extreme,Cold,Reduced,'Pale cyanotic',<3sec,Depressed,Absent,Moderate,None,>1liter,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+?,'\'(109-inf)\'',Normal,Cold,Absent,'Pale cyanotic',<3sec,Depressed,Hypomotile,None,Slight,None,'Above normal pH ',Absent,'>50\%','5.5-6.4 gms/dl',Serosanguinous,?,Yes,'Distended small intestine'
+Normal,'\'(64.5-77]\'',Normal,Normal,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,Slight,>1liter,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'1.6-3 gms/dl',Yes,'Distended small intestine'
+'Above normal','\'(48.5-58]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypermotile,None,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Fast,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,'>3 gms/dl',No,Other
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Extreme,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Hypermotile,Severe,Slight,>1liter,?,Normal,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',Extreme,Cool,Reduced,'Pale cyanotic',<3sec,'Intermittent severe pain',Hypomotile,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Cold,Reduced,'Pale pink',>=3sec,'Intermittent mild pain',Hypomotile,Moderate,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Fast,Cold,Normal,'Pale pink',<3sec,'Continous severe pain',Normal,None,None,None,?,Normal,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(-inf-43]\'',Fast,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypermotile,Slight,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Extreme,Warm,Normal,'Bright red',<3sec,'Intermittent mild pain',Hypermotile,None,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Serosanguinous,'0-1.5 gms/dl',No,Other
+Normal,'\'(48.5-58]\'',Normal,Normal,Normal,'Bright pink',<3sec,'Alert. No pain',Normal,None,None,None,?,Normal,'31\%-50\%','7.6-10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(89-109]\'',Normal,Normal,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Hypomotile,Moderate,None,>1liter,?,Normal,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(109-inf)\'',Extreme,Normal,Reduced,'Bright pink',<3sec,Depressed,Hypomotile,Severe,None,>1liter,?,Decreased,'31\%-50\%','7.6-10 gms/dl',Clear,?,Yes,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Cool,Reduced,'Pale pink',<3sec,'Intermittent severe pain',Normal,Severe,Slight,>1liter,'Above normal pH ',Normal,'31\%-50\%','6.5-7.5 gms/dl',Clear,?,Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',Extreme,Warm,Reduced,'Pale cyanotic',<3sec,'Intermittent severe pain',Hypomotile,Moderate,Slight,>1liter,?,Decreased,'<31\%',?,Serosanguinous,?,Yes,'Distended small intestine'
+Normal,'\'(43-48.5]\'',?,Warm,Reduced,'Normal pink',>=3sec,'Intermittent mild pain',Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,Other
+?,'\'(109-inf)\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Slight,None,>1liter,?,Absent,'31\%-50\%','<5.5 gms/dl',Serosanguinous,'1.6-3 gms/dl',No,'Distended lg intestine'
+?,'\'(77-89]\'',?,Cool,Reduced,'Pale pink',<3sec,'Intermittent severe pain',Absent,Severe,None,>1liter,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Normal,Normal,Normal,'Normal pink',<3sec,Depressed,Hypomotile,Slight,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Fast,Cool,Normal,'Normal pink',<3sec,'Intermittent severe pain',Hypomotile,Slight,None,None,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Warm,Normal,'Normal pink',<3sec,'Alert. No pain',Absent,Slight,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,Other
+Normal,'\'(77-89]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Fast,Cool,Normal,'Bright pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Slight,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Normal,Warm,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Clear,?,No,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Normal,Cool,Normal,'Bright pink',<3sec,Depressed,Hypomotile,Slight,None,<1liter,'Above normal pH ',Decreased,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,?,No,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Normal pink',<3sec,'Continous severe pain',Hypomotile,Severe,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+'Above normal','\'(58-64.5]\'',Extreme,Warm,Reduced,'Normal pink',<3sec,'Continous severe pain',Hypomotile,None,None,>1liter,'Above normal pH ',Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',?,Cool,Reduced,'Dark cyanotic',<3sec,'Continous severe pain',Absent,None,Slight,<1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,Normal
+?,'\'(89-109]\'',Fast,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,Significant,<1liter,?,Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+'Below normal','\'(48.5-58]\'',Extreme,Warm,Reduced,'Pale pink',<3sec,'Alert. No pain',Hypomotile,Slight,Significant,None,'Above normal pH ',Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(48.5-58]\'',Extreme,Cold,Reduced,'Normal pink',<3sec,Depressed,Absent,Moderate,Slight,>1liter,'Above normal pH ',Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,'1.6-3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Reduced,'Normal pink',>=3sec,'Alert. No pain',Hypermotile,Severe,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Normal,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',?,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypermotile,None,Slight,None,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'>3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,None,Slight,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Clear,?,Yes,'Distended lg intestine'
+'Above normal','\'(77-89]\'',Fast,Cool,Reduced,'Pale cyanotic',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%','<5.5 gms/dl',Cloudy,?,No,'Distended lg intestine'
+?,?,?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Extreme,Cool,Normal,'Normal pink',<3sec,'Intermittent mild pain',Normal,Slight,None,>1liter,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Warm,Normal,'Bright pink',<3sec,'Alert. No pain',Hypermotile,Severe,None,>1liter,?,Normal,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',<3sec,Depressed,Hypermotile,None,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,No,Other
+'Below normal','\'(89-109]\'',Fast,Cool,Reduced,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Significant,None,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Serosanguinous,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(48.5-58]\'',Normal,Cool,Normal,'Bright pink',>=3sec,'Intermittent mild pain',Absent,None,Slight,>1liter,'Above normal pH ',Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,Other
+Normal,'\'(43-48.5]\'',Extreme,Cool,Reduced,'Normal pink',<3sec,'Continous severe pain',Hypomotile,Severe,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,'>3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Fast,Cool,Absent,'Pale pink',>=3sec,'Continous severe pain',Absent,Severe,None,None,?,Decreased,'31\%-50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Pale pink',<3sec,'Alert. No pain',Absent,None,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,Other
+?,'\'(58-64.5]\'',Extreme,Cool,Reduced,'Normal pink',<3sec,'Continous severe pain',Absent,Severe,Significant,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Extreme,Cool,Increased,'Bright pink',<3sec,'Intermittent mild pain',Normal,None,Slight,>1liter,?,Normal,'>50\%','6.5-7.5 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(43-48.5]\'',Normal,Warm,Normal,'Bright pink',<3sec,'Intermittent mild pain',Absent,None,Slight,>1liter,?,Invreased,'31\%-50\%','6.5-7.5 gms/dl',Clear,?,No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Extreme,Cool,Reduced,'Pale pink',>=3sec,Depressed,Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Serosanguinous,?,Yes,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',Fast,Cool,Normal,'Pale pink',>=3sec,'Intermittent mild pain',Hypomotile,Slight,Significant,<1liter,?,Absent,'>50\%','6.5-7.5 gms/dl',Cloudy,'0-1.5 gms/dl',No,'Distended small intestine'
+Normal,'\'(64.5-77]\'',Extreme,Normal,Normal,'Pale pink',<3sec,'Intermittent mild pain',Absent,Slight,Slight,None,?,Decreased,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'1.6-3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(89-109]\'',Fast,Normal,Normal,'Bright pink',<3sec,'Alert. No pain',Hypomotile,Slight,Significant,>1liter,'Above normal pH ',Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Warm,Reduced,'Normal pink',<3sec,Depressed,Absent,Moderate,Significant,>1liter,'Above normal pH ',Absent,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Fast,Cool,Normal,'Normal pink',<3sec,Depressed,Hypermotile,Severe,None,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,'1.6-3 gms/dl',No,Other
+Normal,'\'(77-89]\'',?,Cool,Reduced,'Pale cyanotic',>=3sec,'Continous severe pain',Absent,Moderate,Slight,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Fast,Cool,Normal,'Pale pink',<3sec,'Intermittent mild pain',Normal,Moderate,Slight,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',?,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypomotile,None,None,>1liter,?,Normal,'<31\%','>10 gms/dl',Cloudy,?,No,'Firm feces in the lg intestine'
+Normal,'\'(43-48.5]\'',Extreme,Warm,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,None,None,>1liter,?,Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Firm feces in the lg intestine'
+Normal,'\'(48.5-58]\'',Normal,Warm,Normal,'Pale pink',<3sec,'Alert. No pain',Hypomotile,Slight,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(58-64.5]\'',?,Normal,Reduced,'Pale pink',<3sec,Depressed,Hypermotile,None,None,None,?,Absent,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended small intestine'
+Normal,'\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',>=3sec,'Intermittent mild pain',Normal,None,None,None,?,Decreased,'31\%-50\%','<5.5 gms/dl',Cloudy,?,No,'Firm feces in the lg intestine'
+'Above normal','\'(58-64.5]\'',Normal,Cool,Normal,'Normal pink',>=3sec,Depressed,Hypomotile,Severe,None,>1liter,?,Absent,'<31\%',?,Cloudy,?,Yes,'Distended small intestine'
+Normal,'\'(43-48.5]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Continous severe pain',Hypermotile,None,Slight,None,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,?,No,'Firm feces in the lg intestine'
+'Above normal','\'(109-inf)\'',?,Cold,Reduced,'Bright red',>=3sec,Depressed,Absent,Moderate,Slight,<1liter,'Above normal pH ',Decreased,'>50\%','7.6-10 gms/dl',Serosanguinous,'>3 gms/dl',No,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',?,Warm,Reduced,'Bright pink',<3sec,'Continous severe pain',Hypomotile,Moderate,None,>1liter,'Above normal pH ',Normal,'31\%-50\%','6.5-7.5 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(77-89]\'',Fast,Cool,Reduced,'Pale pink',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,'Above normal pH ',Decreased,'31\%-50\%','7.6-10 gms/dl',Cloudy,'>3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',?,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,None,None,>1liter,?,Normal,'<31\%',?,Cloudy,'1.6-3 gms/dl',Yes,Normal
+Normal,'\'(43-48.5]\'',?,Normal,Normal,'Normal pink',<3sec,'Intermittent mild pain',Hypomotile,Slight,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Normal,Normal,'Pale pink',<3sec,'Alert. No pain',Hypomotile,None,None,>1liter,?,Normal,'31\%-50\%','>10 gms/dl',Clear,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(48.5-58]\'',Extreme,Cool,Reduced,'Pale pink',>=3sec,'Continous severe pain',Hypermotile,None,Slight,None,?,Absent,'31\%-50\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',No,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Normal,Cool,Reduced,'Bright pink',>=3sec,Depressed,Absent,None,Slight,>1liter,?,Absent,'<31\%',?,Cloudy,?,No,'Distended lg intestine'
+?,'\'(43-48.5]\'',Extreme,Normal,Normal,'Pale pink',<3sec,'Continous severe pain',Absent,None,Slight,None,?,Normal,'31\%-50\%','7.6-10 gms/dl',Clear,?,Yes,'Distended small intestine'
+Normal,'\'(48.5-58]\'',Fast,Warm,Normal,'Bright pink',<3sec,Depressed,Hypomotile,Moderate,None,<1liter,'Above normal pH ',Absent,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(58-64.5]\'',Normal,Warm,Reduced,'Pale cyanotic',<3sec,'Intermittent mild pain',Absent,Moderate,None,>1liter,'Above normal pH ',Decreased,'>50\%','7.6-10 gms/dl',Cloudy,?,Yes,'Distended small intestine'
+'Below normal','\'(109-inf)\'',Extreme,Cool,Reduced,'Pale pink',>=3sec,Depressed,Normal,None,None,>1liter,?,Decreased,'31\%-50\%',?,Serosanguinous,'>3 gms/dl',No,'Firm feces in the lg intestine'
+Normal,'\'(64.5-77]\'',Fast,Cool,Reduced,'Pale pink',<3sec,'Intermittent severe pain',Absent,Moderate,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Serosanguinous,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+'Below normal','\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',>=3sec,'Alert. No pain',Hypermotile,None,None,>1liter,?,Absent,'31\%-50\%','6.5-7.5 gms/dl',Serosanguinous,'>3 gms/dl',Yes,Other
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Normal pink',<3sec,'Intermittent severe pain',Hypomotile,None,None,>1liter,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(-inf-43]\'',Normal,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Normal,None,None,None,?,Normal,'31\%-50\%',?,Cloudy,?,Yes,'Distended lg intestine'
+Normal,'\'(43-48.5]\'',Extreme,Cool,Reduced,'Normal pink',<3sec,'Continous severe pain',Absent,Severe,None,>1liter,?,Decreased,'<31\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+'Below normal','\'(48.5-58]\'',Normal,Cool,Reduced,'Normal pink',<3sec,'Intermittent mild pain',Absent,Moderate,Slight,>1liter,?,Absent,'<31\%','6.5-7.5 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,?,?,Cold,Reduced,'Pale cyanotic',>=3sec,Depressed,Absent,None,None,>1liter,?,Decreased,'>50\%','>10 gms/dl',Serosanguinous,'1.6-3 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(89-109]\'',?,Normal,Normal,'Pale pink',<3sec,'Intermittent mild pain',Hypomotile,Moderate,Slight,<1liter,'Subnormal pH ',Absent,'31\%-50\%','>10 gms/dl',Cloudy,?,Yes,'Distended lg intestine'
+?,'\'(64.5-77]\'',Normal,Normal,Normal,'Pale cyanotic',<3sec,'Continous severe pain',Hypomotile,Moderate,None,<1liter,'Above normal pH ',Decreased,'>50\%','7.6-10 gms/dl',Clear,?,Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',?,Cool,Normal,'Normal pink',<3sec,'Alert. No pain',Hypermotile,Slight,Slight,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,Other
+Normal,'\'(58-64.5]\'',Fast,Normal,Normal,'Pale pink',<3sec,'Intermittent severe pain',Normal,Slight,None,None,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Clear,?,Yes,'Distended lg intestine'
+Normal,'\'(-inf-43]\'',Extreme,Normal,Normal,'Normal pink',<3sec,'Alert. No pain',Hypomotile,None,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,'Firm feces in the lg intestine'
+Normal,'\'(-inf-43]\'',Normal,Cool,Reduced,'Pale pink',<3sec,'Alert. No pain',Hypermotile,None,None,>1liter,?,Decreased,'31\%-50\%','5.5-6.4 gms/dl',Cloudy,?,No,Normal
+Normal,'\'(43-48.5]\'',Normal,Cool,Normal,'Pale pink',<3sec,'Intermittent severe pain',Hypomotile,None,Slight,None,?,Decreased,'31\%-50\%','>10 gms/dl',Cloudy,'0-1.5 gms/dl',Yes,'Distended lg intestine'
+Normal,'\'(64.5-77]\'',Extreme,Cool,Normal,'Pale cyanotic',>=3sec,Depressed,Absent,Severe,None,>1liter,?,Decreased,'<31\%',?,Cloudy,?,Yes,'Distended lg intestine'
