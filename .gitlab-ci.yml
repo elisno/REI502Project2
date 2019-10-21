@@ -30,7 +30,7 @@ pages:
   stage: deploy
   environment:
     name: Staging
-    url: elisno.gitlab.io/mplausnir/report02.pdf
+    url: elisno.gitlab.io/REI502Project2/report02.pdf
   # Copy artifact from compile-job
   script:
     - echo "Deploy to pages"
