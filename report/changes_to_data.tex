@@ -1,5 +1,10 @@
 \section{Pre-processing}
 
+\begin{itemize}
+\item The data set can be found in an arff format at \\ \href{github.com/ongxuanhong/Preprocessing-with-horse-colic-dataset/blob/master/horse-colic.arff}{https://github.com/ongxuanhong/Preprocessing-with-horse-colic-dataset/blob/master/horse-colic.arff}
+\end{itemize}
+The data set we have chosen is in the field of veterinary. More specifically, horse health. Successful association rule mining could potentially help veterinarians with diagnosis and  to evaluate treatment.\\
+We start by having a look at the data through the visualize tab in Weka.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=17cm]{originalAttributeDistribution}
@@ -7,13 +12,10 @@
 \end{figure}
 
 As we can see the attributes: Age, Type of lesion and Subtype of lesion are very unevenly distributed. So we remove them along with the attribute pathology$\_$cp$\_$data. That attribute was described as being unsignificant in the attribute information sheet.
-
+In order to use the Apriori algorithm the all attributes have to be nominal. So we discretize the following attributes accordingly. Our objective in that sense is to find some interesting rules with relatively low support but high confidence.
+We set the \verb|outcome| as the new class value. Even though association rule mining does not rely on classes  \verb|outcome| could be an interesting metric in the case of using association rule mining for classification. \\\\
 \begin{itemize}
-
-\item The data set can be found in an arff format at \\ \href{github.com/ongxuanhong/Preprocessing-with-horse-colic-dataset/blob/master/horse-colic.arff}{https://github.com/ongxuanhong/Preprocessing-with-horse-colic-dataset/blob/master/horse-colic.arff}
-
-\item If association rule mining is used for classification, the \verb|outcome| attribute is set as the class attribute.\\
-The class values are renamed as:
+The outcome values are renamed as:
 \begin{itemize}
 \item lived
 \item died
@@ -58,16 +60,7 @@ The class values are renamed as:
 
 \item nasogastric reflux pH was split into 3 bins
 
-\item Removed the Age attribute since it was so skewed
-
 
 \end{itemize}
 
-
-The following attributes were removed from the dataset:
-\begin{itemize}
-\item Type of lesion:
-\item Subtype of lesion:
-\item Pathology$\_ $cp$ \_$data:
-\end{itemize}
 Note: Using the \verb|MergeManyValues| for numerical attribues...
