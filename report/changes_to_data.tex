@@ -3,20 +3,20 @@
 \begin{itemize}
 \item The data set can be found in an arff format at \\ \href{github.com/ongxuanhong/Preprocessing-with-horse-colic-dataset/blob/master/horse-colic.arff}{https://github.com/ongxuanhong/Preprocessing-with-horse-colic-dataset/blob/master/horse-colic.arff}
 \end{itemize}
-The data set we have chosen is in the field of veterinary. More specifically, horse health. Successful association rule mining could potentially help veterinarians with diagnosis and  to evaluate treatment.\\
-We start by having a look at the data through the visualize tab in Weka.
+The data set we have chosen belongs to the field of veterinary medicine. More specifically, horse health. Successful association rule analysis has the potential to help veterinarians with diagnosis and  to evaluate treatment.\\
+Below is a visualization of the data.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=17cm]{originalAttributeDistribution}
 \caption{The original attribute value distribution}
 \end{figure}
+ 
 
-
-As we can see the attributes: Age, Type of lesion and Subtype of lesion are very unevenly distributed. So we remove them along with the attribute pathology$\_$cp$\_$data (note: that this attribute is originally set as the class attribute). Pathology$\_$cp$\_$data was described as being unsignificant in the attribute information sheet and is therefor removed.\\
-Our objective is to find some interesting rules with relatively low support but high confidence that could help veterinarians with prognosis and diagnosis.\\
-We start by setting the \verb|outcome| as the new temporary class value. Even though association rule mining does not rely on classes  \verb|outcome| could be an interesting metric in the case of using association rule mining for classification.\\
-The class value can be changed later to explore other possibly interesting rules.\\
-In order to use the Apriori algorithm all attributes have to be nominal. So we discretize the following attributes accordingly.
+From the figure above, the attributes: \verb|Age|, \verb|Type of lesion| and \verb|Subtype of lesion| have a visibly uneven distribution. These attribute are removed before rule generation is started. The attribute \verb|pathology_cp_data| was described as being insignificant in the attribute information sheet and is therefore also removed.\\
+Our objective is to find some interesting rules with relatively low support but high confidence that could help veterinarians with diagnosis and prognosis of digestive problems in horses.\\
+The attribute \verb|outcome| is selected initially as the temporary class attribute. Even though association rule analysis does not rely on classes,  \verb|outcome| could be an interesting metric in the case of using association rule mining for classification.\\
+The class value can always be changed in order to explore other interesting rules with different consequents.\\
+In order to use the Apriori algorithm, all attributes have to be nominal. So the following attributes are discretized accordingly:
 \begin{itemize}
 \item The outcome values are renamed as:
 \begin{itemize}
@@ -25,11 +25,11 @@ In order to use the Apriori algorithm all attributes have to be nominal. So we d
 \item was euthanized
 \end{itemize}
 
-\item The rectal temperature was discretized to throw out extreme values, using 8 bins.
+\item The rectal temperature is discretized to throw out extreme values, using 8 bins.
 
-\item The pulse attribute was also discretized, this time into 8 bins with equal frequency.
+\item The pulse attribute is also discretized. Here, 8 bins are used with equal frequency.
 
-\item The respiratory rate was relabeled accordingly:
+\item The respiratory rate is relabeled accordingly:
 \begin{itemize}
 \item Normal: 8-10 bpm
 \item Above Normal: 11-25 bpm
@@ -37,7 +37,7 @@ In order to use the Apriori algorithm all attributes have to be nominal. So we d
 \item Extreme: Over 35 bpm
 \end{itemize}
 
-\item Total protein was discretized into 5 bins
+\item Total protein is discretized into 5 bins
 \begin{itemize}
 \item < 5.5 gms/dL
 \item 5.5-6.4 gms/dL
@@ -47,23 +47,23 @@ In order to use the Apriori algorithm all attributes have to be nominal. So we d
 \end{itemize}
 
 
-\item Abdomcentesis total protein was split into 3 bins
+\item Abdomcentesis total protein is split into 3 bins
 \begin{itemize}
 \item 0- 1.5 gms/dL
 \item 1.6 - 3 gms/dL
 \item > 3 gms/dL
 \end{itemize}
 
-\item packed cell volume was split into 3 bins
+\item packed cell volume is split into 3 bins
 \begin{itemize}
 \item $< 31 \%$
 \item $31-50 \%$
 \item $> 50 \%$
 \end{itemize}
 
-\item nasogastric reflux pH was split into 3 bins
+\item nasogastric reflux pH is split into 3 bins
 
 
 \end{itemize}
 
-Note: Using the \verb|MergeManyValues| for numerical attribues...
+Most of these attributes can be discretized with the \verb|MergeManyValues| filter (for numerical attribues).
