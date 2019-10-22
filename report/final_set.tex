@@ -1,4 +1,12 @@
-\section{Rule generation}
+\section{Rule generation} \label{sec: rule gen}
+After the investigation of minimum support as well as different metrics for rule generation, we remove attributes such as \verb|surgery|, \verb|site of lesion|, \verb|outcome| and \verb|hospital number|. This removes some bias from the data, and allows for more exploratory learning. In this section, \verb|abdomen| is chosen as the class attribute for classification with association rule analysis.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{abdomen-class}
+\caption{Distribution of the \textit{abdomen}-attribute, with values: distended lg intestine, other, Normal, Firm feces in the lg intestine, Distended small intestine}
+\end{figure}
+
 \begin{verbatim}
 	weka.associations.Apriori -R -N 1000 -T 0 -C 0.4 -D 0.05 -U 0.42 -M 0.1 -S -1.0 -A -c 20
 \end{verbatim}
