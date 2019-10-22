@@ -1,0 +1,27 @@
+\section{Conclusion}
+In this work on the Horse colic data set, association rule generation is highly dependent on the available attributes.
+Many of the attributes are strongly correlated by definition, which results in trivial rules (such as in section \ref{sec: leve}). After removing such attributes, the Apriori algorithm is a robust method of rule generation.\\
+
+\noindent
+With the following parameters
+\begin{itemize}
+\item Setting $minsup = \left[0.1, 0.42 \right]$
+\item Choosing lift as a metric, with $minconf \sim 4.0$
+\item Setting the significance level to $0.01$
+\end{itemize}
+rulesets (with an upper bound of 1000 rules) are generated within 0.5 seconds for all cases. A selection of  interesting rules corresponding to these parameters can be found in section \ref{sec: rule gen}.\\
+
+\noindent
+Important rules can be missed when removing attributes such as \verb|age| or \verb|types of lesions|. Reintroducing these attributes for future work may be useful, once more data has been collected for the underrepresented values (e.g. collecting more cases for young horses).\\
+
+\noindent
+In order to find the rarest possible rules, minimum support can be lowered to $minsup = \frac{1}{368} \approx 0.003$. However, computational resources on the general-consumer level may not be adequate for this task.\\
+
+
+\noindent
+Additionally, classification with association rule analysis tends to ignore rules where the consequent has low support (e.g. \verb|abdomen| is biased towards \verb|distended lg colon| and a majority of rules use this class value). Other attributes may be more suitable as classes in this case (e.g. \verb|outcome|,\verb|surgery| or \verb|surgical lesion|).\\
+
+
+\noindent
+In general, association rule analysis of this data set has the potential to aid veterinarians in diagnosis in horses who suffer from abdominal pain, as well as offering suggestions when making a prognosis. With enough data, some new insight can be gained from non-invasive measurements and can help identify criteria for costly and dangerous treatments such as surgery.
+

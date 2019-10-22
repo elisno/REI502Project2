@@ -11,13 +11,14 @@ We start by having a look at the data through the visualize tab in Weka.
 \caption{The original attribute value distribution}
 \end{figure}
 
+
 As we can see the attributes: Age, Type of lesion and Subtype of lesion are very unevenly distributed. So we remove them along with the attribute pathology$\_$cp$\_$data (note: that this attribute is originally set as the class attribute). Pathology$\_$cp$\_$data was described as being unsignificant in the attribute information sheet and is therefor removed.\\
 Our objective is to find some interesting rules with relatively low support but high confidence that could help veterinarians with prognosis and diagnosis.\\
 We start by setting the \verb|outcome| as the new temporary class value. Even though association rule mining does not rely on classes  \verb|outcome| could be an interesting metric in the case of using association rule mining for classification.\\
 The class value can be changed later to explore other possibly interesting rules.\\
 In order to use the Apriori algorithm all attributes have to be nominal. So we discretize the following attributes accordingly.
 \begin{itemize}
-\item The outcome values are renamed as:
+
 \begin{itemize}
 \item lived
 \item died
