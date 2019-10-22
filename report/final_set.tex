@@ -1,5 +1,5 @@
-\section{Rule generation} \label{sec: rule gen}
-After the investigation of minimum support as well as different metrics for rule generation, we remove attributes such as \verb|surgery|, \verb|site of lesion|, \verb|outcome| and \verb|hospital number|. This removes some bias from the data, and allows for more exploratory learning. In this section, \verb|abdomen| is chosen as the class attribute for classification with association rule analysis.
+\section{Final rule generation} \label{sec: rule gen}
+After the investigation of minimum support as well as different metrics for rule generation, additional attributes are removed, such as \verb|surgery|, \verb|site of lesion|, \verb|outcome| and \verb|hospital number|. This removes some bias from the data, and allows for more exploratory learning. In this section, \verb|abdomen| is chosen as the class attribute for classification with association rule analysis.
 
 \begin{figure}[H]
 \centering
@@ -42,6 +42,9 @@ After the investigation of minimum support as well as different metrics for rule
  \verb| <conf:(1)> lift:(1.54) lev:(0.05) [19] conv:(19.28)|
 \end{itemize}
 
+
+\newpage
+
 \begin{verbatim}
 	weka.associations.Apriori -R -N 1000 -T 1 -C 4.0 -D 0.05 -U 0.42 -M 0.1 -S 0.01 -c 20
 \end{verbatim}
@@ -67,3 +70,7 @@ After the investigation of minimum support as well as different metrics for rule
 
 \verb|conf:(0.9) < lift:(4.55)> lev:(0.08) [28] conv:(6.57)|
 \end{itemize}
+
+
+\noindent
+More unusual rules can be found by decreasing the lower bound of $minsup$, at the expense of more computing power.

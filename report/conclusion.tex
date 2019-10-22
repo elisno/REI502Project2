@@ -9,17 +9,17 @@ With the following parameters
 \item Choosing lift as a metric, with $minconf \sim 4.0$
 \item Setting the significance level to $0.01$
 \end{itemize}
-rulesets (with an upper bound of 1000 rules) are generated within 0.5 seconds for all cases. A selection of  interesting rules corresponding to these parameters can be found in section \ref{sec: rule gen}.\\
+rulesets (with an upper bound of 1000 rules) are generated within 0.5 seconds for all cases. A selection of interesting rules, corresponding to these parameters, can be found in section \ref{sec: rule gen}.\\
 
 \noindent
 Important rules can be missed when removing attributes such as \verb|age| or \verb|types of lesions|. Reintroducing these attributes for future work may be useful, once more data has been collected for the underrepresented values (e.g. collecting more cases for young horses).\\
 
 \noindent
-In order to find the rarest possible rules, minimum support can be lowered to $minsup = \frac{1}{368} \approx 0.003$. However, computational resources on the general-consumer level may not be adequate for this task.\\
+In order to find the rarest possible rules, minimum support can be lowered to $minsup = \frac{1}{368} \approx 0.003$. However, consumer-level computer hardware may not be suitable for this task.\\
 
 
 \noindent
-Additionally, classification with association rule analysis tends to ignore rules where the consequent has low support (e.g. \verb|abdomen| is biased towards \verb|distended lg colon| and a majority of rules use this class value). Other attributes may be more suitable as classes in this case (e.g. \verb|outcome|,\verb|surgery| or \verb|surgical lesion|).\\
+Classification with association rule analysis tends to ignore rules where the consequent has low support (e.g. \verb|abdomen| is biased towards \verb|distended lg colon| and a majority of rules use this class value). Other attributes may be more suitable as classes in this case (e.g. \verb|outcome|,\verb|surgery| or \verb|surgical lesion|).\\
 
 
 \noindent
